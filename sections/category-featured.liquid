@@ -1,0 +1,112 @@
+<div class="container" data-type="brand-logo">
+  <div class="swiper category-slider">
+      <div class="swiper-wrapper flex-slider">
+          {% for block in section.blocks %}
+              <div class="swiper-slide">
+                  <div class="category-item">
+                      <a href="{{ block.settings.img_url }}" tabindex="0">
+                          <img src="{{ block.settings.img | img_url : '218x132' }}" alt="category" loading="lazy">
+                      </a>
+                    <div class="category-cnt">
+                      <span>
+                          {{  block.settings.title }}
+                      </span>
+                    </div>
+                  </div>
+              </div>
+          {% endfor %}                
+      </div>    
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
+</div>
+<script>
+    var swiper = new Swiper(".category-slider", {
+    slidesPerView: 9,
+    spaceBetween: 60,
+    loop: false,
+    speed: 800,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+    1200: {
+        slidesPerView: 9,
+      },
+      992: {
+        slidesPerView: 5,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      475: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+    },
+  });
+</script>
+<style>
+  .category-sec {
+    margin: 30px 0;
+}
+
+.category-item {
+    text-align: center;
+}
+
+.category-item a {
+    background: #f7f7f7;
+    padding: 10px;
+    display: block;
+    border-radius: 50%;
+}
+  .category-item a img {
+    mix-blend-mode: multiply;
+}
+.category-cnt {
+    margin: 10px 0;
+}
+</style>
+{% schema %}
+{
+  "name": "Category Feature",
+  "tag": "section",
+  "class": "category-sec",
+  "max_blocks": 10,
+  "disabled_on": {
+      "groups": ["header", "footer"]
+  },
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "img"
+        },
+        {
+          "type": "url",
+          "id": "img_url",
+          "label": "img URL"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Feature"
+    }
+  ]
+}
+{% endschema %}

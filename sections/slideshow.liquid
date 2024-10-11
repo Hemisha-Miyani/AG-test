@@ -1,0 +1,233 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+<div class="container">
+  <div class="row">
+        <div class="col-xl-7 col-12 category-img-box shop-category-box">
+          <div class="category-img-box-inner">
+              <div class="category-img-box-body">
+                  <img src="{{ section.settings.bg_img | img_url: 'master' }}" alt="bestseller-image" loading="lazy">
+                 <div class="content-box-title">
+                      <div class="content-box-title-inner">
+                          <div class="category-lbl">{{ section.settings.subtitle }}</div>
+                          <h3>{{ section.settings.title }}</h3>
+                          <span>{{ section.settings.label }}</span>
+                          <p>{{ section.settings.desc }}</p>
+                          <a href="{{ section.settings.btn_url }}" class="btn" tabindex="0">
+                              {{ section.settings.btn }}
+                          </a>
+                      </div>
+                 </div>
+              </div>
+          </div>
+      </div>
+        <div class="col-xl-5 col-12 category-img-box shop-category-box">
+          <div class="row">
+            {% for block in section.blocks %}
+            <div class="col-6">
+            <div class="category-img-box-inner category-img-box-right-inner">
+              <div class="category-img-box-body">
+                  <img src="{{ block.settings.bg_img | img_url: 'master' }}" alt="bestseller-image" loading="lazy">
+                 <div class="content-box-title">
+                      <div class="content-box-title-inner">
+                          <h3>{{ block.settings.title }}</h3>
+                          <a href="{{ block.settings.btn_url }}" class="btn" tabindex="0">
+                              {{ block.settings.btn }}
+                          </a>
+                      </div>
+                 </div>
+              </div>
+          </div>
+          </div>
+              {% endfor %}
+          </div>
+      </div>
+</div>
+</div>
+<style>
+  .banner-content, .banner-content h3, .banner-content h4{
+    color: {{ section.settings.text_clr }};
+  }
+  .category-img-box-inner {
+    width: 100%;
+    display: flex;
+}
+.category-img-box-body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    transition: all ease-in-out 0.5s;
+    -webkit-transition: all ease-in-out 0.5s;
+    -moz-transition: all ease-in-out 0.5s;
+    -ms-transition: all ease-in-out 0.5s;
+    -o-transition: all ease-in-out 0.5s;
+    padding: 150px 20px 30px 30px;
+    align-items: flex-end;
+}
+.category-img-box-body img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: all ease-in-out 0.5s;
+    object-fit: cover;
+    -webkit-transition: all ease-in-out 0.5s;
+    -moz-transition: all ease-in-out 0.5s;
+    -ms-transition: all ease-in-out 0.5s;
+    -o-transition: all ease-in-out 0.5s;
+}
+  .shop-category-sec{
+    position: relative;
+    overflow-x: hidden;
+    z-index: 1;
+}
+.shop-category-sec .shop-category-box .category-lbl{
+   color: {{ section.settings.text_clr }};
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+.shop-category-sec .shop-category-box .category-img-box-body{
+    padding: 100px 50px;
+}
+.shop-category-sec .shop-category-box .content-box-title{
+    max-width: 350px;
+    width: 100%;
+}
+.shop-category-sec .shop-category-box h3{
+      margin: 0 0 30px;
+    color: {{ section.settings.text_clr }};
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.shop-category-sec .shop-category-box p {
+    color: #fff;
+    font-size: 34px;
+    margin: 0 0 20px;
+    line-height: 1;
+}
+.shop-category-sec .shop-category-box{
+    display: flex;
+}
+  .shop-category-sec .shop-category-box span {
+    text-transform: uppercase;
+    color: {{ section.settings.text_clr }};
+    font-size: 20px;
+}
+.shop-category-sec .shop-category-box .content-box-title .content-box-title-inner {
+    display: flex;
+    flex-direction: column;
+}
+.shop-category-sec .shop-category-box .category-img-box-right-inner h3 {
+    font-size: 25px;
+    margin: 0 0 20px;
+}
+
+.shop-category-sec .shop-category-box .category-img-box-right-inner .category-img-box-body {
+    padding: 100px 20px 20px 20px;
+}
+
+.shop-category-sec .shop-category-box .category-img-box-right-inner .content-box-title {
+    max-width: 200px;
+}
+</style>
+{% schema %}
+{
+  "name": "t:sections.slideshow.name",
+  "tag": "section",
+  "class": "section shop-category-sec",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "text_clr",
+      "label": "Text Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "subtitle"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "label"
+    },
+    {
+        "type": "text",
+        "id": "desc",
+        "label": "desc"
+    },
+    {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Button URL"
+    },
+        {
+        "type": "text",
+        "id": "btn",
+        "label": "btn"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "t:sections.slideshow.blocks.slide.name",
+      "limit": 5,
+      "settings": [
+        {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Button URL"
+    },
+        {
+        "type": "text",
+        "id": "btn",
+        "label": "btn"
+    }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.slideshow.presets.name",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

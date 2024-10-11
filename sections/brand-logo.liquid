@@ -1,0 +1,109 @@
+<div class="container" data-type="brand-logo">
+  <h2>{{ section.settings.title }}</h2>
+  <div class="swiper partner-logo-slider">
+      <div class="swiper-wrapper flex-slider">
+          {% for block in section.blocks %}
+              <div class="swiper-slide">
+                  <div class="partner-logo-item">
+                      <a href="{{ block.settings.img_url }}" tabindex="0">
+                          <img src="{{ block.settings.img | img_url : '218x132' }}" alt="partner-logo" loading="lazy">
+                      </a>
+                  </div>
+              </div>
+          {% endfor %}                
+      </div>    
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
+</div>
+<style>
+  .partner-logo-slider .flex-slider{
+    flex-direction: row !important;
+}
+  .partner-logo-sec {
+    padding: 50px 0;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.partner-logo-sec h2 {
+    font-size: 32px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.partner-logo-item {
+    background: #fff;
+    border: 1px solid #f5f5f5;
+    padding: 15px 10px;
+}
+</style>
+<script>
+    var swiper = new Swiper(".partner-logo-slider", {
+    slidesPerView: 7,
+    slidesPerColumn: 2,
+    grid: {
+        rows: 2,
+    },
+    loop: false,
+    speed: 800,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      992: {
+        slidesPerView: 7,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      475: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        centeredSlides: false,
+      },
+    },
+  });
+</script>
+{% schema %}
+{
+  "name": "Brand Logo",
+  "tag": "section",
+  "class": "partner-logo-sec",
+  "max_blocks": 20,
+  "disabled_on": {
+      "groups": ["header", "footer"]
+  },
+  "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "img_url",
+          "label": "Image URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Logo"
+    }
+  ]
+}
+{% endschema %}
