@@ -15,7 +15,6 @@
         "slide_CnFDXG": {
           "type": "slide",
           "settings": {
-            "bg_img": "shopify://shop_images/img2.png",
             "title": "Flexfit & fitted caps",
             "btn_url": "",
             "btn": "Shop Many Styles"
@@ -24,7 +23,6 @@
         "slide_KHV3Qt": {
           "type": "slide",
           "settings": {
-            "bg_img": "shopify://shop_images/img3.png",
             "title": "Truck mesh hats",
             "btn_url": "",
             "btn": "Take a Peek"
@@ -33,7 +31,6 @@
         "slide_8qFqeX": {
           "type": "slide",
           "settings": {
-            "bg_img": "shopify://shop_images/img4.png",
             "title": "Budget <br>caps",
             "btn_url": "",
             "btn": "Save Now"
@@ -42,7 +39,6 @@
         "slide_QXhmYh": {
           "type": "slide",
           "settings": {
-            "bg_img": "shopify://shop_images/img5.png",
             "title": "Flexfit & fitted caps",
             "btn_url": "",
             "btn": "Shop Many Styles"
@@ -57,7 +53,6 @@
       ],
       "settings": {
         "text_clr": "#ffffff",
-        "bg_img": "shopify://shop_images/img1.png",
         "subtitle": "New Products",
         "title": "Pacific best selling trucker hats",
         "label": "Style P114",
@@ -96,7 +91,6 @@
         "logo_image_VxCFi3": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/4.png",
             "img_url": "",
             "title": "Trucker Mesh"
           }
@@ -104,7 +98,6 @@
         "logo_image_cwWBey": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/5.png",
             "img_url": "",
             "title": "Mans Hats"
           }
@@ -112,7 +105,6 @@
         "logo_image_9xiEPR": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/6.png",
             "img_url": "",
             "title": "Ladies Hats"
           }
@@ -120,7 +112,6 @@
         "logo_image_dNhxr8": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/7.png",
             "img_url": "",
             "title": "Kids Hats"
           }
@@ -128,7 +119,6 @@
         "logo_image_yCmQGi": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/8.png",
             "img_url": "",
             "title": "Military Hats"
           }
@@ -136,7 +126,6 @@
         "logo_image_M3d7gb": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/9.png",
             "img_url": "",
             "title": "Umpire Hats"
           }
@@ -190,112 +179,96 @@
         "logo_image_EUagjk": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand1.png",
             "img_url": ""
           }
         },
         "logo_image_MWTUNU": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand9.png",
             "img_url": ""
           }
         },
         "logo_image_xtVWLq": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand17.png",
             "img_url": ""
           }
         },
         "logo_image_H3xMrc": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand2.png",
             "img_url": ""
           }
         },
         "logo_image_Vy4pRf": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand3.png",
             "img_url": ""
           }
         },
         "logo_image_RzpcWX": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand4.png",
             "img_url": ""
           }
         },
         "logo_image_FBpqPB": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand5.png",
             "img_url": ""
           }
         },
         "logo_image_zLqnyF": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand6.png",
             "img_url": ""
           }
         },
         "logo_image_FfQVQV": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand7.png",
             "img_url": ""
           }
         },
         "logo_image_LMYLN7": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand8.png",
             "img_url": ""
           }
         },
         "logo_image_MHqPtJ": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand11.png",
             "img_url": ""
           }
         },
         "logo_image_axqAzY": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand12.png",
             "img_url": ""
           }
         },
         "logo_image_CA7Qpg": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand13.png",
             "img_url": ""
           }
         },
         "logo_image_Qc3kmw": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand14.png",
             "img_url": ""
           }
         },
         "logo_image_pYV9Tr": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand15.png",
             "img_url": ""
           }
         },
         "logo_image_XhGbWX": {
           "type": "logo_image",
           "settings": {
-            "img": "shopify://shop_images/brand16.png",
             "img_url": ""
           }
         }
@@ -318,6 +291,7 @@
         "logo_image_pYV9Tr",
         "logo_image_XhGbWX"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop By Brand"
       }
